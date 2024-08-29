@@ -1,6 +1,8 @@
 package com.fadenai.dataprocessing.ui.home
 
-data class HomeItem(
-    val title: String,
+import androidx.annotation.StringRes
 
+data class HomeItem(
+    @StringRes val title: Int,
+    val destination: Class<*>? = null
 )

@@ -1,5 +1,6 @@
 package com.fadenai.dataprocessing.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -13,8 +14,15 @@ class HomeActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             DataProcessingTheme {
-                HomeListView{
-
+                HomeListView { item ->
+                    item.destination?.let { destination ->
+                        startActivity(
+                            Intent(
+                                this,
+                                destination
+                            )
+                        )
+                    }
                 }
             }
         }

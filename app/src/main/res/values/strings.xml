@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">DataProcessingExercise</string>
     <string name="title_activity_home">Home List</string>
+    <string name="sorting_custom_objects">Sorting Custom Objects</string>
+
+    <string name="sample_button_title">Sample Button Title</string>
 </resources>
