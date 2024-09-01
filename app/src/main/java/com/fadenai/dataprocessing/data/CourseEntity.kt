@@ -1,6 +1,6 @@
-package com.fadenai.dataprocessing.data.sample1
+package com.fadenai.dataprocessing.data
 
-data class Sample1Course(
+data class CourseEntity(
     val courseId: Int,
     val title: String,
     val enrollment: Int,
