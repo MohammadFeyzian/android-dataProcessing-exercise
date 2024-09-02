@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="?android:actionBarSize"
             android:theme="@style/ToolbarStyle"
-            app:title="@string/sorting_custom_objects" />
+            app:title="@string/sample_1" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

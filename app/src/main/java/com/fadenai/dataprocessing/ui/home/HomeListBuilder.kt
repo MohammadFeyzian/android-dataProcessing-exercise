@@ -8,11 +8,11 @@ object HomeListBuilder {
     fun buildHomeItems(): List<HomeItem> {
 
         return listOf(
-            HomeItem(R.string.sorting_custom_objects, Sample1Activity::class.java),
-            HomeItem(R.string.sample_button_title),
-            HomeItem(R.string.sample_button_title),
-            HomeItem(R.string.sample_button_title),
-            HomeItem(R.string.sample_button_title),
+            HomeItem(R.string.sample_1, Sample1Activity::class.java),
+            HomeItem(R.string.sample_button),
+            HomeItem(R.string.sample_button),
+            HomeItem(R.string.sample_button),
+            HomeItem(R.string.sample_button),
         )
     }
 }
