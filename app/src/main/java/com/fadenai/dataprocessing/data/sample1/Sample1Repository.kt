@@ -7,7 +7,7 @@ import kotlinx.coroutines.withContext
 
 class Sample1Repository {
 
-    suspend fun getSimpleData(): List<String> = withContext(Dispatchers.IO) {
+    suspend fun getData(): List<String> = withContext(Dispatchers.IO) {
 
         delay(1000)
 
