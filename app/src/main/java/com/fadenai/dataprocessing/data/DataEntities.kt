@@ -10,3 +10,9 @@ data class CourseEntity(
     val students: List<StudentEntity> = emptyList(),
     var isTopCourse: Boolean = false
 )
+
+data class StudentEntity(
+    val studentId: Int,
+    val name: String,
+    val email: String
+)
