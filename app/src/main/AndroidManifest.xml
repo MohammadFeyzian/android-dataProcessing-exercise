@@ -26,9 +26,9 @@
 
         </activity>
 
-        <activity
-            android:name=".ui.sample1.Sample1Activity"
-            android:exported="false" />
+        <activity android:name=".ui.sample1.Sample1Activity" />
+
+        <activity android:name=".ui.sample2.Sample2Activity" />
 
     </application>
 

@@ -2,6 +2,7 @@
     <string name="app_name">DataProcessingExercise</string>
     <string name="title_activity_home">Home List</string>
     <string name="sample_1">Sample 1</string>
+    <string name="sample_2">Sample 2</string>
 
     <string name="sample_button">Sample Button</string>
 </resources>

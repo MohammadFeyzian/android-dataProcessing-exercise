@@ -19,7 +19,12 @@ class Sample1ViewModel : ViewModel() {
         viewModelScope.launch {
             _viewState.value = Sample1ViewState.Loading
 
-            _viewState.value = Sample1ViewState.Data(data = repository.getData())
+            try {
+                _viewState.value = Sample1ViewState.Data(data = repository.getData())
+            } catch (e: Exception) {
+                e.printStackTrace()
+                _viewState.value = Sample1ViewState.Error
+            }
         }
     }
 

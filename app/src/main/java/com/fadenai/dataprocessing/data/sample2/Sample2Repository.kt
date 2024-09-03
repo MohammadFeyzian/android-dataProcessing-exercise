@@ -1,13 +1,17 @@
 package com.fadenai.dataprocessing.data.sample2
 
 import com.fadenai.dataprocessing.data.CourseEntity
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 import kotlin.math.abs
 
 class Sample2Repository {
 
-    suspend fun getData(): List<CourseEntity> {
-        return processData()
+    suspend fun getData(): List<CourseEntity> = withContext(Dispatchers.IO) {
+        delay(1000) // Simulate the long processing
+        processData()
     }
 
     private fun processData(): List<CourseEntity> {
@@ -35,8 +39,10 @@ fun main() = runBlocking {
     val repo = Sample2Repository()
 
     repo.getData().forEach {
-        println("${it.title}\n${it.enrollment} enrollments," +
-                " ${it.duration} hours ${if (it.isTopCourse) "\nTop course" else ""}")
+        println(
+            "${it.title}\n${it.enrollment} enrollments," +
+                    " ${it.duration} hours ${if (it.isTopCourse) "\nTop course" else ""}"
+        )
         println("---------------------")
     }
 

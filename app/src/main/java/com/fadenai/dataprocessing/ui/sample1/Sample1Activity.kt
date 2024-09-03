@@ -1,6 +1,7 @@
 package com.fadenai.dataprocessing.ui.sample1
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -56,6 +57,10 @@ class Sample1Activity : AppCompatActivity() {
                 is Sample1ViewState.Data -> {
                     binding.progressBar.isVisible = false
                     sampleAdapter.addData(viewState.data)
+                }
+
+                Sample1ViewState.Error -> {
+                    Toast.makeText(this, "Oops, something went wrong!", Toast.LENGTH_SHORT).show()
                 }
             }
         }

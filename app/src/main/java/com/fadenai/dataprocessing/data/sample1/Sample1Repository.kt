@@ -8,9 +8,7 @@ import kotlinx.coroutines.withContext
 class Sample1Repository {
 
     suspend fun getData(): List<String> = withContext(Dispatchers.IO) {
-
-        delay(1000)
-
+        delay(1000) // Simulate the long processing
         processData()
     }
 
